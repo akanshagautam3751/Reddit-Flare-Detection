@@ -10,7 +10,9 @@ from nltk.corpus import stopwords #import stopwords
 nltk.download('wordnet')
 from textblob import Word
 import praw #reddit api
-import pickle 
+import pickle
+import request 
+# import jsonify #to use json objects
 
 ## load the trained model and tfidf variable
 model = pickle.load(open('trained_variables/model.pkl','rb'))
@@ -27,9 +29,17 @@ def main():
     	predicted_flare = fetch(link)
     	return flask.render_template('main.html', original_input={'link':link}, result = predicted_flare[0])
 
-@app.route("/automated_testing")
+@app.route("/automated_testing", methods=['GET', 'POST'])
 def automated_testing():
-    return "Hello, testing"
+	if flask.request.method == 'POST':
+		file = flask.request.files['file']
+		lines = file.readlines()
+		dict_links_flares = dict()
+		for line in lines:
+			link = line.decode()
+			flare = fetch(link)
+			dict_links_flares[link] = flare[0]
+		return dict_links_flares
 
 def fetch(link):
 	client_id = '1jhEvPDMQYI5ZQ'
@@ -80,4 +90,4 @@ def fetch(link):
 	return y_predict
     
 if __name__ == "__main__":
-    app.run(debug=True)
+	app.run(debug=True)
