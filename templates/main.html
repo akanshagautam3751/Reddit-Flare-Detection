@@ -7,20 +7,26 @@
 		}
 	</style>
 	<head>
-	    <title>Reddit Flare Detection</title>
+		<title>Reddit Flare Detection</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 	</head>
 	<body>
 		<div class="jumbotron text-center" align = 'center'>
 		    <h1>Reddit Flare Detection</h1> 
-		    <p>Flare Detection for Reddit India data</p> 
+		    <p>The application to predict Flare of a <a href="https://www.reddit.com/r/india/">r/india</a> post.</p> 
 		</div>
 		<div class="container-fluid">
 	  		<form action="{{ url_for('main') }}" method="POST">
 		    	<fieldset>
-		        	<legend>Input values:</legend>
-		        	Link:
-		        	<input name="link" type="string" required>
-		  	    	<input type="submit">
+		    		<div class='form-group'>
+			        	<label for='link'>Link: </label>
+			        	<input class="form-control" placeholder="Enter Reddit Post link" name="link" type="string" required>
+			        </div>
+			  	    <input type="submit" class="btn btn-default">
 		    	</fieldset>
 			</form>
 			<div>
@@ -29,11 +35,11 @@
 			<div align="center">
 			    {% if result %}
 			        {% for variable, value in original_input.items() %}
-			            <b>{{ variable }}</b> : {{ value }}
+			            <b> Given link </b> : {{ value }}
 			        {% endfor %}
 			        <br>
-			        <br> <b>Predicted flare: </b>
-			           <p style="font-size:50px">{{ result }}</p>
+			        <br> 
+			        <b>Predicted flare: </b> <p style="font-size:20px">{{ result }}</p>
 			    {% endif %}
 			</div>
 		</div>
