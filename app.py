@@ -12,7 +12,8 @@ from textblob import Word
 import praw #reddit api
 import pickle
 import request 
-# import jsonify #to use json objects
+import requests
+import json # import jsonify #to use json objects
 
 ## load the trained model and tfidf variable
 model = pickle.load(open('trained_variables/model.pkl','rb'))
@@ -32,14 +33,16 @@ def main():
 @app.route("/automated_testing", methods=['GET', 'POST'])
 def automated_testing():
 	if flask.request.method == 'POST':
-		file = flask.request.files['file']
+		file = flask.request.files['upload_file']
 		lines = file.readlines()
 		dict_links_flares = dict()
 		for line in lines:
 			link = line.decode()
 			flare = fetch(link)
 			dict_links_flares[link] = flare[0]
-		return dict_links_flares
+		dict_links_flares = json.dumps(dict_links_flares) #convert the dictionary to string object
+		json_links_flares = json.loads(dict_links_flares) #convert the string to dictionary object
+		return json_links_flares
 
 def fetch(link):
 	client_id = '1jhEvPDMQYI5ZQ'
