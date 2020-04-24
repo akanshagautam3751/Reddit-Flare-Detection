@@ -14,6 +14,7 @@ import pickle
 import request 
 import requests
 import json # import jsonify #to use json objects
+from xgboost.sklearn import XGBClassifier
 
 ## load the trained model and tfidf variable
 model = pickle.load(open('trained_variables/model.pkl','rb'))
@@ -67,11 +68,6 @@ def fetch(link):
 	df['body'] = df['body'].apply(lambda x: " ".join(x.lower() for x in x.split()))
 	df['title'] = df['title'].apply(lambda x: " ".join(x.lower() for x in x.split()))
 	df['comments'] = df['comments'].apply(lambda x: " ".join(x.lower() for x in x.split()))
-
-	"""**Remove Punctuation**: Punctuation do not add any extra information when handling with text data. Therefore, removal of all punctuations leads to the reduction in the size of the features set."""
-	df['body'] = df['body'].str.replace('[^\w\s]','')
-	df['title'] = df['title'].str.replace('[^\w\s]','')
-	df['comments'] = df['comments'].str.replace('[^\w\s]','')
 
 	"""**Remove Stopwords**: Commonly occuring words should be removed as they do not add much value to the meaning of the document."""
 	stop = stopwords.words('english') # define the stopword instance
