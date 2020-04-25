@@ -20,7 +20,6 @@ The entire code has been developed using Python programming language, utilizing 
 ## Project Execution
 * Open the terminal
 * Clone this repository using https://github.com/akanshagautam3751/Reddit-Flare-Detection.git
-* Create a virtual environment for the application to work
 * Activate the virtual environment
 * Make sure your system has pip and python installed
 * Download all the dependencies in requirements.txt using `pip install -r requirements.txt`
