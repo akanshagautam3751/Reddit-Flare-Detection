@@ -31,6 +31,10 @@ The entire code has been developed using Python programming language, utilizing 
 
 ### Data Collection
 Collect `1118` Reddit posts of `12` flares using the Reddit API `praw`. 
+
+![sample](https://github.com/akanshagautam3751/Reddit-Flare-Detection/blob/master/Images/samples.JPG)
+
+
 Flares like `AskIndia`, `Scheduled`, `Photography`, `Food`, `Business/Finance`, `Politics`, `Non-Political`, `AMA`, `Policy/Economics`, `Science/Technology`, `Sports` have 100 posts each whereas `[R]eddiquette` flare has only 18 posts.
 
 ### Basic Pre-processing
@@ -41,21 +45,29 @@ Flares like `AskIndia`, `Scheduled`, `Photography`, `Food`, `Business/Finance`, 
 **Note:** Removal of punctuations and common occurring words with respect to the data leads to decrease in the model accuracy by 10% 
 
 ### Analysis
-Use `tokenizer` to generate a `WordCloud`. In `WordCloud`, the font of the word is directly proportional to the frequency of the word in the text data 
-* *pic - wordcloud title feature*
+Use `tokenizer` to generate a `WordCloud`. In `WordCloud`, the font of the word is directly proportional to the frequency of the word in the text data.
+
+* ![wordcloud_title](https://github.com/akanshagautam3751/Reddit-Flare-Detection/blob/master/Images/wordclound_title.JPG)
+
 Words like `political`, `india`, `indian food`, `photography`, `science` are the most used words in the `title` feature.
 
-*pic - wordcloud body feature*
+* ![wordcloud_body](https://github.com/akanshagautam3751/Reddit-Flare-Detection/blob/master/Images/wordcloud_body.JPG)
+
 Words like `indian`, `india`, `https`, `people`, `government` are the most used words in the `body` feature.
 
-*pic - wordcloud comments feature*
+* ![wordcloud_comments](https://github.com/akanshagautam3751/Reddit-Flare-Detection/blob/master/Images/wordcloud_comments.JPG)
+
 Words like `people`, `india`, `time`, `good` are the most used words in the `comments` feature.
 
 ### Advance text processing
+
 Use bi-grams to return the frequency of the sequence of two words using corpus
-*pic - bigram title feature*
-*pic - bigram body feature*
-*pic - bigram comments feature*
+
+![bigram_title](https://github.com/akanshagautam3751/Reddit-Flare-Detection/blob/master/Images/bigrams_title.JPG)
+
+![bigram_body](https://github.com/akanshagautam3751/Reddit-Flare-Detection/blob/master/Images/bigrams_body.JPG)
+
+![bigram_comments](https://github.com/akanshagautam3751/Reddit-Flare-Detection/blob/master/Images/bigrams_comments.JPG)
 
 ### Split the dataset
 The data is split into `train` and `test` set. The `train` data consists of the 70% posts samples while `test` data consists 30% posts samples. 
@@ -88,7 +100,7 @@ The results are as follows:
   ![Result Image 1](https://github.com/akanshagautam3751/Reddit-Flare-Detection/blob/master/Images/results_body.JPG)
 
 
-* Post `comments` as the only features
+* Post `comments` as the only feature
 
   ![Result Image 1](https://github.com/akanshagautam3751/Reddit-Flare-Detection/blob/master/Images/results_comments.JPG)
 
