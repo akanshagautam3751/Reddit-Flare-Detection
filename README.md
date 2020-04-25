@@ -12,7 +12,7 @@ Reddit Flare Detection is a web application that predicts the flares of India su
 * [trained_variables](https://github.com/akanshagautam3751/Reddit-Flare-Detection/tree/master/trained_variables) : It contains the trained XGBoost Classifier Model and the trained TFIDF instance. 
 * [templates](https://github.com/akanshagautam3751/Reddit-Flare-Detection/tree/master/templates) : It contains the main html file that will render when running the application.
 * [test.py](https://github.com/akanshagautam3751/Reddit-Flare-Detection/blob/master/test.py): It contains the script requires to test the performance of the classifier.
-* [sample_test_file.txt]()https://github.com/akanshagautam3751/Reddit-Flare-Detection/blob/master/sample_test_file.txt: It contains a link of a r/india post in every line.
+* [sample_test_file.txt](https://github.com/akanshagautam3751/Reddit-Flare-Detection/blob/master/sample_test_file.txt): It contains a link of a r/india post in every line.
 
 ## Codebase
 The entire code has been developed using Python programming language, utilizing it's powerful text processing and machine learning modules. The application has been developed using Flask web framework and hosted on Heroku web server.
