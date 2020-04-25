@@ -75,14 +75,16 @@ To find the suitable model with respect to the features, the models used to fit 
 I have obtained test accuracies simultaneously which can be found in the later section. 
 
 ## Results
+
 The results are as follows:
-1. Post `title` as the only features
-2. Post `body` as the only features
-3. Post `comments` as the only features
-4. Concatenation of post `title` and `body` as features
-5. Concatencation of post `body` and `comments` as features
-6. Concatenation of post `title` and `comments` as features
-7. Concatenation of post `title`, `body` and `comments` as features
+
+Post `title` as the only features
+Post `body` as the only features
+Post `comments` as the only features
+Concatenation of post `title` and `body` as features
+Concatencation of post `body` and `comments` as features
+Concatenation of post `title` and `comments` as features
+Concatenation of post `title`, `body` and `comments` as features
 
 ## Inference
 It was observed that the XGBoost Classifier gave the highest accuracy of 86% using the concatenation of `title`, `body` and `comments` as features. Thus, it was used to predict the flare correctly.  
