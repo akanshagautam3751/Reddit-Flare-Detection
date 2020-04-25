@@ -87,6 +87,7 @@ To find the suitable model with respect to the features, the models used to fit 
 * Decision-Tree Classifier
 * Random forest Classifier
 * XGBoost Classifier 
+
 I have obtained test accuracies simultaneously which can be found in the later section. 
 
 ## Results
