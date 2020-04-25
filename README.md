@@ -42,22 +42,26 @@ Flares like `AskIndia`, `Scheduled`, `Photography`, `Food`, `Business/Finance`, 
 * **Remove Stopwords:** remove commonly occurring words as they do not add much value to the meaning of the data
 * **Spelling correction:** it helps in understanding the semantics of the text better
 * **Lemmatization:** it converts the word into it's root word vocalbulary
+
 **Note:** Removal of punctuations and common occurring words with respect to the data leads to decrease in the model accuracy by 10% 
 
 ### Analysis
 Use `tokenizer` to generate a `WordCloud`. In `WordCloud`, the font of the word is directly proportional to the frequency of the word in the text data.
 
-* ![wordcloud_title](https://github.com/akanshagautam3751/Reddit-Flare-Detection/blob/master/Images/wordclound_title.JPG)
+* Words like `political`, `india`, `indian food`, `photography`, `science` are the most used words in the `title` feature.
 
-Words like `political`, `india`, `indian food`, `photography`, `science` are the most used words in the `title` feature.
+  ![wordcloud_title](https://github.com/akanshagautam3751/Reddit-Flare-Detection/blob/master/Images/wordclound_title.JPG)
 
-* ![wordcloud_body](https://github.com/akanshagautam3751/Reddit-Flare-Detection/blob/master/Images/wordcloud_body.JPG)
 
-Words like `indian`, `india`, `https`, `people`, `government` are the most used words in the `body` feature.
+* Words like `indian`, `india`, `https`, `people`, `government` are the most used words in the `body` feature.
 
-* ![wordcloud_comments](https://github.com/akanshagautam3751/Reddit-Flare-Detection/blob/master/Images/wordcloud_comments.JPG)
+  ![wordcloud_body](https://github.com/akanshagautam3751/Reddit-Flare-Detection/blob/master/Images/wordcloud_body.JPG)
 
-Words like `people`, `india`, `time`, `good` are the most used words in the `comments` feature.
+
+* Words like `people`, `india`, `time`, `good` are the most used words in the `comments` feature.
+
+  ![wordcloud_comments](https://github.com/akanshagautam3751/Reddit-Flare-Detection/blob/master/Images/wordcloud_comments.JPG)
+
 
 ### Advance text processing
 
