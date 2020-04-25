@@ -40,11 +40,60 @@ Flares like `AskIndia`, `Scheduled`, `Photography`, `Food`, `Business/Finance`, 
 * **Lemmatization:** it converts the word into it's root word vocalbulary
 **Note:** Removal of punctuations and common occurring words with respect to the data leads to decrease in the model accuracy by 10% 
 
-## Analysis
+### Analysis
+Use `tokenizer` to generate a `WordCloud`. In `WordCloud`, the font of the word is directly proportional to the frequency of the word in the text data 
+* *pic - wordcloud title feature*
+Words like `political`, `india`, `indian food`, `photography`, `science` are the most used words in the `title` feature.
+
+*pic - wordcloud body feature*
+Words like `indian`, `india`, `https`, `people`, `government` are the most used words in the `body` feature.
+
+*pic - wordcloud comments feature*
+Words like `people`, `india`, `time`, `good` are the most used words in the `comments` feature.
+
+### Advance text processing
+Use bi-grams to return the frequency of the sequence of two words using corpus
+*pic - bigram title feature*
+*pic - bigram body feature*
+*pic - bigram comments feature*
 
 ### Split the dataset
 The data is split into `train` and `test` set. The `train` data consists of the 70% posts samples while `test` data consists 30% posts samples. 
 
-## Results
+### Convert the textual data into meaningful features
+Machines do not understand raw text data. So, to convert the text data into numeric data, Sci-kit offers powerful processing tools such as the CountVectorizer and the TFIDF Vectorizer.
+The text was fed into these vectors and analysed further that proves that TFIDF Vectorizer performs better on classifier than the CountVectorizer.
 
-## Reference
+### Train the model
+To find the suitable model with respect to the features, the models used to fit the data are as follows: 
+* Logistic Regression 
+* Linear SVC 
+* Naive Bayes Classifier
+* Decision-Tree Classifier
+* Random forest Classifier
+* XGBoost Classifier 
+I have obtained test accuracies simultaneously which can be found in the later section. 
+
+## Results
+The results are as follows:
+1. Post `title` as the only features
+2. Post `body` as the only features
+3. Post `comments` as the only features
+4. Concatenation of post `title` and `body` as features
+5. Concatencation of post `body` and `comments` as features
+6. Concatenation of post `title` and `comments` as features
+7. Concatenation of post `title`, `body` and `comments` as features
+
+## Inference
+It was observed that the XGBoost Classifier gave the highest accuracy of 86% using the concatenation of `title`, `body` and `comments` as features. Thus, it was used to predict the flare correctly.  
+Also, using the post `body` as the only feature gave the worst accuracies on all classifiers.
+
+## References 
+* https://towardsdatascience.com/scraping-reddit-data-1c0af3040768
+* https://towardsdatascience.com/machine-learning-text-processing-1d5a2d638958
+* https://scikit-learn.org/stable/modules/generated/sklearn.feature_extraction.text.TfidfVectorizer.html
+* https://towardsdatascience.com/designing-a-machine-learning-model-and-deploying-it-using-flask-on-heroku-9558ce6bde7b
+
+
+
+
