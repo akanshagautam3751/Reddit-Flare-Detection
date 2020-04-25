@@ -1,5 +1,5 @@
 # Reddit-Flare-Detection
-Reddit Flare Detection is a web application that predicts the flares of India subreddit. This application is deployed on Heroku Servers and here's the link for the same. 
+Reddit Flare Detection is a web application that predicts the flares of India subreddit. This application is deployed on Heroku Servers and here's the link for the same: https://reddit-flare-detection.herokuapp.com/  
 
 ## Directory Structure
 * requirements.txt : It contains all the required dependencies
