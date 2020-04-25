@@ -79,6 +79,10 @@ I have obtained test accuracies simultaneously which can be found in the later s
 The results are as follows:
 
 Post `title` as the only features
+
+![Result Image 1](https://github.com/akanshagautam3751/Reddit-Flare-Detection/blob/master/Images/results_title.JPG)
+
+
 Post `body` as the only features
 Post `comments` as the only features
 Concatenation of post `title` and `body` as features
