@@ -2,17 +2,17 @@
 Reddit Flare Detection is a web application that predicts the flares of India subreddit. This application is deployed on Heroku Servers and here's the link for the same: https://reddit-flare-detection.herokuapp.com/  
 
 ## Directory Structure
-* requirements.txt : It contains all the required dependencies
-* Procfile.txt : It requires to set-up Heroku
-* app.py : It contains the main function to run the Flask web-application.
-* data.csv : It contains all the collected data from India subreddit. 
-* Notebooks : There are 2 Jupyter Notebooks in this folder. 
+* [requirements.txt](https://github.com/akanshagautam3751/Reddit-Flare-Detection/blob/master/requirements.txt) : It contains all the required dependencies
+* [Procfile.txt](https://github.com/akanshagautam3751/Reddit-Flare-Detection/blob/master/Procfile) : It requires to set-up Heroku
+* [app.py](https://github.com/akanshagautam3751/Reddit-Flare-Detection/blob/master/app.py) : It contains the main function to run the Flask web-application.
+* [data.csv](https://github.com/akanshagautam3751/Reddit-Flare-Detection/blob/master/data.csv) : It contains all the collected data from India subreddit. 
+* [Notebooks](https://github.com/akanshagautam3751/Reddit-Flare-Detection/tree/master/Notebooks) : There are 2 Jupyter Notebooks in this folder. 
   * `Reddit_flare_detector_2_part_1.ipynb` contains the script required to collect the data
   * `Reddit_flare_detector_2_part_2_3_ipynb.ipynb` contains the script required to perform EDA on the collected data and then used the inferences to build a Flare Detector.  
-* trained_variables : It contains the trained XGBoost Classifier Model and the trained TFIDF instance. 
-* templates : It contains the main html file that will render when running the application.
-* test.py: It contains the script requires to test the performance of the classifier.
-* sample_test_file.txt: It contains a link of a r/india post in every line.
+* [trained_variables](https://github.com/akanshagautam3751/Reddit-Flare-Detection/tree/master/trained_variables) : It contains the trained XGBoost Classifier Model and the trained TFIDF instance. 
+* [templates](https://github.com/akanshagautam3751/Reddit-Flare-Detection/tree/master/templates) : It contains the main html file that will render when running the application.
+* [test.py](https://github.com/akanshagautam3751/Reddit-Flare-Detection/blob/master/test.py): It contains the script requires to test the performance of the classifier.
+* [sample_test_file.txt]()https://github.com/akanshagautam3751/Reddit-Flare-Detection/blob/master/sample_test_file.txt: It contains a link of a r/india post in every line.
 
 ## Codebase
 The entire code has been developed using Python programming language, utilizing it's powerful text processing and machine learning modules. The application has been developed using Flask web framework and hosted on Heroku web server.
