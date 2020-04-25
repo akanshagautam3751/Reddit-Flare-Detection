@@ -78,17 +78,40 @@ I have obtained test accuracies simultaneously which can be found in the later s
 
 The results are as follows:
 
-Post `title` as the only features
+* Post `title` as the only feature
 
-![Result Image 1](https://github.com/akanshagautam3751/Reddit-Flare-Detection/blob/master/Images/results_title.JPG)
+  ![Result Image 1](https://github.com/akanshagautam3751/Reddit-Flare-Detection/blob/master/Images/results_title.JPG)
 
 
-Post `body` as the only features
-Post `comments` as the only features
-Concatenation of post `title` and `body` as features
-Concatencation of post `body` and `comments` as features
-Concatenation of post `title` and `comments` as features
-Concatenation of post `title`, `body` and `comments` as features
+* Post `body` as the only feature
+
+  ![Result Image 1](https://github.com/akanshagautam3751/Reddit-Flare-Detection/blob/master/Images/results_body.JPG)
+
+
+* Post `comments` as the only features
+
+  ![Result Image 1](https://github.com/akanshagautam3751/Reddit-Flare-Detection/blob/master/Images/results_comments.JPG)
+
+
+* Concatenation of post `title` and `body` as features
+
+  ![Result Image 1](https://github.com/akanshagautam3751/Reddit-Flare-Detection/blob/master/Images/results_title_body.JPG)
+
+
+* Concatencation of post `body` and `comments` as features
+
+  ![Result Image 1](https://github.com/akanshagautam3751/Reddit-Flare-Detection/blob/master/Images/results_body_comments.JPG)
+
+
+* Concatenation of post `title` and `comments` as features
+
+  ![Result Image 1](https://github.com/akanshagautam3751/Reddit-Flare-Detection/blob/master/Images/results_title_comments.JPG)
+
+
+* Concatenation of post `title`, `body` and `comments` as features
+
+  ![Result Image 1](https://github.com/akanshagautam3751/Reddit-Flare-Detection/blob/master/Images/results_title_body_comments.JPG)
+
 
 ## Inference
 It was observed that the XGBoost Classifier gave the highest accuracy of 86% using the concatenation of `title`, `body` and `comments` as features. Thus, it was used to predict the flare correctly.  
